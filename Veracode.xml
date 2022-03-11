@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<summaryreport xmlns="https://www.veracode.com/schema/reports/export/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" account_id="77527" analysis_id="16903934" app_id="1145924" app_name="SCO_AWS" assurance_level="4" build_id="16931570" business_criticality="4" business_owner="Alan Watson" business_unit="Digital" first_build_submitted_date="2021-11-08 05:29:16 UTC" flaws_not_mitigated="2" generation_date="2022-02-23 11:23:36 UTC" grace_period_expired="false" is_latest_build="false" last_update_time="2022-02-23 11:13:26 UTC" legacy_scan_engine="false" life_cycle_stage="Not Specified" planned_deployment_date="" platform="Not Specified" policy_compliance_status="Did Not Pass" policy_name="TSB" policy_rules_status="Did Not Pass" policy_version="7" report_format_version="1.3" sandbox_id="3518916" sandbox_name="Development" scan_overdue="false" static_analysis_unit_id="16919584" submitter="Nivedha P" tags="" teams="SCO_AWS" total_flaws="2" veracode_level="VL2" version="SCO-2022-02-23 10:57:22 GMT" xsi:schemaLocation="https://www.veracode.com/schema/reports/export/1.0 https://analysiscenter.veracode.com/resource/summaryreport.xsd">
+  <static-analysis analysis_size_bytes="110698722" engine_version="20220131164437" next_scan_due="2022-03-23 10:13:09 UTC" published_date="2022-02-23 11:13:09 UTC" rating="B" score="97" submitted_date="2022-02-23 11:06:09 UTC" version="SCO-2022-02-23 10:57:22 GMT">
+    <modules>
+      <module architecture="JVM" compiler="JAVAC_11" loc="92366" name="tsb-onboarding-avro-message-publisher-1.0.jar" numflawssev0="0" numflawssev1="0" numflawssev2="0" numflawssev3="0" numflawssev4="2" numflawssev5="0" os="Java J2SE 11" score="97"/>
+      <module architecture="JVM" compiler="JAVAC_11" loc="92911" name="tsb-onboarding-generic-stub-data-service-1.0.jar" numflawssev0="0" numflawssev1="0" numflawssev2="0" numflawssev3="0" numflawssev4="0" numflawssev5="0" os="Java J2SE 11" score="100"/>
+    </modules>
+  </static-analysis>
+  <severity level="5"/>
+  <severity level="4">
+    <category categoryname="Encapsulation" count="2" severity="High"/>
+  </severity>
+  <severity level="3"/>
+  <severity level="2"/>
+  <severity level="1"/>
+  <severity level="0"/>
+  <flaw-status fixed="0" new="0" not_mitigated="2" open="2" reopen="0" sev-1-change="0" sev-2-change="0" sev-3-change="0" sev-4-change="0" sev-5-change="0" total="2"/>
+  <customfields>
+    <customfield name="Application Criticality" value="Critical"/>
+    <customfield name="Lifecycle Status" value="Strategic"/>
+    <customfield name="CI Reference" value="0003607"/>
+  </customfields>
+  <software_composition_analysis components_violated_policy="1" third_party_components="88" violate_policy="true">
+    <vulnerable_components>
+      <component component_affects_policy_compliance="false" component_id="0069957a-f9f6-414d-ac2e-69320d072835" description="" file_name="jboss-logging-3.4.1.Final.jar" library="JBoss Logging 3" library_id="maven:org.jboss.logging:jboss-logging:3.4.1.Final:" max_cvss_score="" sha1="40fd4d696c55793e996d1ff3c475833f836c2498" vendor="org.jboss.logging" version="3.4.1.Final" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jboss-logging-3.4.1.Final.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jboss-logging-3.4.1.Final.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="047f155c-517e-4ffd-b789-a35a92a5317d" description="" file_name="jackson-dataformat-yaml-2.12.3.jar" library="Jackson-dataformat-YAML" library_id="maven:com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.3:" max_cvss_score="" sha1="bedc092db8e9edbba1d243309b563599bff08761" vendor="com.fasterxml.jackson.dataformat" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-dataformat-yaml-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-dataformat-yaml-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="07e4caa4-059e-41ae-80c4-cfd450098a63" description="LatencyUtils is a package that provides latency recording and reporting utilities." file_name="LatencyUtils-2.0.3.jar" library="LatencyUtils" library_id="maven:org.latencyutils:LatencyUtils:2.0.3:" max_cvss_score="" sha1="769c0b82cb2421c8256300e907298a9410a2a3d3" vendor="org.latencyutils" version="2.0.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/LatencyUtils-2.0.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/CC-BY-3.0.html" mitigation="false" name="Creative Commons Attribution 3.0" risk_rating="2" spdx_id="CC-BY-3.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="true" component_id="087fe662-9f92-4eb2-b24d-f86d09d2bfd3" description="" file_name="tomcat-embed-core-9.0.46.jar" library="tomcat-embed-core" library_id="maven:org.apache.tomcat.embed:tomcat-embed-core:9.0.46:" max_cvss_score="7.0" sha1="aa1d93f2e508b6a1001bba9ad2a570a574f6ed64" vendor="org.apache.tomcat.embed" version="9.0.46" vulnerabilities="2">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/tomcat-embed-core-9.0.46.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/tomcat-embed-core-9.0.46.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities>
+          <vulnerability cve_id="CVE-2021-33037" cve_summary="tomcat-coyote is vulnerable request smuggling.  Incorrect way of parsing of the HTTP transfer-encoding request header causes request smuggling when it is used with a reverse proxy and if the client declared it would only accept an HTTP/1.0 response." cvss_score="5.3" cwe_id="" first_found_date="2021-07-30 05:18:32 UTC" mitigation="false" severity="3" severity_desc="Medium" vulnerability_affects_policy_compliance="false"/>
+          <vulnerability cve_id="CVE-2022-23181" cve_summary="tomcat-catalina is vulnerable to time of check to time of use. The vulnerability exists in `file` function of `FileStore.java` which allows an attacker to perform unauthenticated actions causing a race condition." cvss_score="7.0" cwe_id="" first_found_date="2022-02-18 01:47:18 UTC" mitigation="false" severity="4" severity_desc="High" vulnerability_affects_policy_compliance="true"/>
+        </vulnerabilities>
+        <violated_policy_rules>
+          <policy_rule desc="High and Above Not Allowed" type="Disallow Vulnerabilities by Severity" value="High"/>
+          <policy_rule desc="7 and Above Not Allowed" type="Disallow CVSS Score" value="7"/>
+        </violated_policy_rules>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="0d5f0e99-851c-422c-90fd-4b5ea23b3288" description="" file_name="javax-websocket-server-impl-9.4.42.v20210604.jar" library="Jetty :: Websocket :: javax.websocket.server :: Server Implementation" library_id="maven:org.eclipse.jetty.websocket:javax-websocket-server-impl:9.4.42.v20210604:" max_cvss_score="" sha1="1af0e598091d978f07ed555f0adc978352f67205" vendor="org.eclipse.jetty.websocket" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/javax-websocket-server-impl-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/javax-websocket-server-impl-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="137d9ad7-ec1b-4ca9-924c-f5134b4bfffd" description="" file_name="connect-api-2.4.1.jar" library="Apache Kafka" library_id="maven:org.apache.kafka:connect-api:2.4.1:" max_cvss_score="" sha1="d94e59ffcca704f234f7d8e16bc46cc79155ca31" vendor="org.apache.kafka" version="2.4.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/connect-api-2.4.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/connect-api-2.4.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="13856e9e-6e81-4326-8275-7aebc190969b" description="" file_name="micrometer-core-1.7.0.jar" library="micrometer-core" library_id="maven:io.micrometer:micrometer-core:1.7.0:" max_cvss_score="" sha1="bc7dc1605f2099dc3c39156b7f62ac889f54fb67" vendor="io.micrometer" version="1.7.0" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/micrometer-core-1.7.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="1617cbc7-c61a-4b5a-ab08-dde6e603951d" description="The Apache Commons IO library contains utility classes, stream implementations, file filters,&#10;file comparators, endian transformation classes, and much more." file_name="commons-io-2.6.jar" library="Apache Commons IO" library_id="maven:commons-io:commons-io:2.6:" max_cvss_score="4.8" sha1="815893df5f31da2ece4040fe0a12fd44b577afaf" vendor="commons-io" version="2.6" vulnerabilities="1">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/commons-io-2.6.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities>
+          <vulnerability cve_id="CVE-2021-29425" cve_summary="commons-io is vulnerable to directory traversal. Invoking the method `FileNameUtils.normalize` with a malicious input string would potentially allow access to files within the parent directory." cvss_score="4.8" cwe_id="" first_found_date="2021-04-13 08:32:31 UTC" mitigation="false" severity="3" severity_desc="Medium" vulnerability_affects_policy_compliance="false"/>
+        </vulnerabilities>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="17ea088f-fb9f-4aeb-b85f-7f59fe816954" description="" file_name="asm-commons-9.0.jar" library="asm-commons" library_id="maven:org.ow2.asm:asm-commons:9.0:" max_cvss_score="" sha1="5a34a3a9ac44f362f35d1b27932380b0031a3334" vendor="org.ow2.asm" version="9.0" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/asm-commons-9.0.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/asm-commons-9.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/BSD-3-Clause.html" mitigation="false" name="BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License" risk_rating="2" spdx_id="BSD-3-Clause"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="1d77f500-65a2-4430-bc14-fbe55a623198" description="" file_name="jakarta.validation-api-2.0.2.jar" library="Jakarta Bean Validation API" library_id="maven:jakarta.validation:jakarta.validation-api:2.0.2:" max_cvss_score="" sha1="5eacc6522521f7eacb081f95cee1e231648461e7" vendor="jakarta.validation" version="2.0.2" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jakarta.validation-api-2.0.2.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jakarta.validation-api-2.0.2.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="1dfc5093-f89c-4f14-8c32-bc094711b270" description="" file_name="jetty-servlet-9.4.42.v20210604.jar" library="Jetty :: Servlet Handling" library_id="maven:org.eclipse.jetty:jetty-servlet:9.4.42.v20210604:" max_cvss_score="" sha1="2b0529a22eab56f9a5553dd963e79edee7ffc1b5" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-servlet-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-servlet-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="1e4c47c6-c369-433b-b35d-ede78c8b4386" description="" file_name="jakarta.websocket-api-1.1.2.jar" library="Jakarta WebSocket - Server API" library_id="maven:jakarta.websocket:jakarta.websocket-api:1.1.2:" max_cvss_score="" sha1="69c2fdfb75081cc935bc9d6c5616d12b0b73815f" vendor="jakarta.websocket" version="1.1.2" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jakarta.websocket-api-1.1.2.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jakarta.websocket-api-1.1.2.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html" mitigation="false" name="GNU General Public License with Classpath Exceptions version 2.0" risk_rating="4" spdx_id="GPL-2.0-with-classpath-exception"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="1f63bfda-1e81-43fe-98f8-91a86a31a6b5" description="" file_name="micrometer-registry-prometheus-1.5.2.jar" library="micrometer-registry-prometheus" library_id="maven:io.micrometer:micrometer-registry-prometheus:1.5.2:" max_cvss_score="" sha1="333143d86b0671ba6e9bc426e1f2d92015fb601e" vendor="io.micrometer" version="1.5.2" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/micrometer-registry-prometheus-1.5.2.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="20d428d4-fdb2-4f12-b571-3e3ac82b37ee" description="" file_name="spring-boot-autoconfigure-2.5.1.jar" library="spring-boot-autoconfigure" library_id="maven:org.springframework.boot:spring-boot-autoconfigure:2.5.1:" max_cvss_score="" sha1="d5f3dff4ddc3bde2dcd38f410567e0f2c28d8ba7" vendor="org.springframework.boot" version="2.5.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-boot-autoconfigure-2.5.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-boot-autoconfigure-2.5.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="26326ccb-2bbf-4159-ac5b-cbf56e03e29b" description="" file_name="jetty-util-9.4.42.v20210604.jar" library="Jetty :: Utilities" library_id="maven:org.eclipse.jetty:jetty-util:9.4.42.v20210604:" max_cvss_score="" sha1="16b116e9982c2037fd4bf05ce2525ccd5917eb9c" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-util-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-util-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="26f154fe-d4cf-47de-b092-52e54a5c9939" description="" file_name="HdrHistogram-2.1.12.jar" library="HdrHistogram" library_id="maven:org.hdrhistogram:HdrHistogram:2.1.12:" max_cvss_score="" sha1="6eb7552156e0d517ae80cc2247be1427c8d90452" vendor="org.hdrhistogram" version="2.1.12" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/HdrHistogram-2.1.12.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/BSD-2-Clause.html" mitigation="false" name="BSD 2-Clause &quot;Simplified&quot; License" risk_rating="2" spdx_id="BSD-2-Clause"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/CC-BY-3.0.html" mitigation="false" name="Creative Commons Attribution 3.0" risk_rating="2" spdx_id="CC-BY-3.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="28490b27-19e8-46c3-baba-cbcf91f81cf3" description="" file_name="spring-web-5.3.8.jar" library="Spring Web" library_id="maven:org.springframework:spring-web:5.3.8:" max_cvss_score="" sha1="daa288e67b0f2e09a033500d5ce8406677c5045c" vendor="org.springframework" version="5.3.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-web-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-web-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="2c5dc680-0749-446e-8b64-9c5e58187711" description="" file_name="jetty-servlets-9.4.42.v20210604.jar" library="Jetty :: Utility Servlets and Filters" library_id="maven:org.eclipse.jetty:jetty-servlets:9.4.42.v20210604:" max_cvss_score="" sha1="10d94c7f98d6408dbd471c6db9ad9c4dfb6c6fef" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-servlets-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-servlets-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="2ebf3c34-5254-43eb-bbb1-d39d92fd00be" description="" file_name="spring-core-5.3.8.jar" library="Spring Core" library_id="maven:org.springframework:spring-core:5.3.8:" max_cvss_score="4.3" sha1="da9b87dacaa5bbf80fad0f7b483988372a00a152" vendor="org.springframework" version="5.3.8" vulnerabilities="1">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-core-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-core-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities>
+          <vulnerability cve_id="CVE-2021-22096" cve_summary="Spring Framework is vulnerable to privilege escalation. The vulnerability exists due to lack of secure validations of user input which allows a malicious user to inject additional log files. " cvss_score="4.3" cwe_id="" first_found_date="2021-10-29 17:58:22 UTC" mitigation="false" severity="3" severity_desc="Medium" vulnerability_affects_policy_compliance="false"/>
+        </vulnerabilities>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="360bea0c-439e-4ba5-8270-f8a581794e4f" description="" file_name="simpleclient_common-0.8.1.jar" library="Prometheus Java Simpleclient Common" library_id="maven:io.prometheus:simpleclient_common:0.8.1:" max_cvss_score="" sha1="51a4b2d2cb44e08ed4e79fbac80baa4bf65ab7fa" vendor="io.prometheus" version="0.8.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/simpleclient_common-0.8.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="388d9f6a-c4f8-4221-a957-2ecf6662667c" description="" file_name="hibernate-validator-6.2.0.Final.jar" library="Hibernate Validator Engine" library_id="maven:org.hibernate.validator:hibernate-validator:6.2.0.Final:" max_cvss_score="" sha1="d6b0760dfffbf379cedd02f715ff4c9a2e215921" vendor="org.hibernate.validator" version="6.2.0.Final" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/hibernate-validator-6.2.0.Final.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/hibernate-validator-6.2.0.Final.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="40224468-e80c-4e07-ab66-967fd4f5dbec" description="" file_name="spring-aop-5.3.8.jar" library="Spring AOP" library_id="maven:org.springframework:spring-aop:5.3.8:" max_cvss_score="" sha1="1377f80f938b1fc7eabe9e6c4f6895e77e3bec40" vendor="org.springframework" version="5.3.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-aop-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-aop-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="4222b180-15fc-405d-90a5-55d0182435b8" description="Apache Commons Lang, a package of Java utility classes for the&#10;  classes that are in java.lang's hierarchy, or are considered to be so&#10;  standard as to justify existence in java.lang." file_name="commons-lang3-3.2.1.jar" library="Apache Commons Lang" library_id="maven:org.apache.commons:commons-lang3:3.2.1:" max_cvss_score="" sha1="66f13681add50ca9e4546ffabafaaac7645db3cf" vendor="org.apache.commons" version="3.2.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/commons-lang3-3.2.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/commons-lang3-3.2.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="47182bec-b579-497f-8a84-cc8087bb1e41" description="" file_name="swagger-models-1.5.3.jar" library="swagger-models" library_id="maven:io.swagger:swagger-models:1.5.3:" max_cvss_score="" sha1="2bb7497f9320118a2e68ae3eeff862a6a83b0261" vendor="io.swagger" version="1.5.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/swagger-models-1.5.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/swagger-models-1.5.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="47d64b09-256b-40e3-8619-27a0509d616f" description="" file_name="javax-websocket-client-impl-9.4.42.v20210604.jar" library="Jetty :: Websocket :: javax.websocket :: Client Implementation" library_id="maven:org.eclipse.jetty.websocket:javax-websocket-client-impl:9.4.42.v20210604:" max_cvss_score="" sha1="b010f48daf86292715b7e54c36a0ff420965b6d6" vendor="org.eclipse.jetty.websocket" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/javax-websocket-client-impl-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/javax-websocket-client-impl-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="4b3f5ad3-c683-41c3-b850-984b3336b744" description="" file_name="jetty-annotations-9.4.42.v20210604.jar" library="Jetty :: Servlet Annotations" library_id="maven:org.eclipse.jetty:jetty-annotations:9.4.42.v20210604:" max_cvss_score="" sha1="b751881211b641638dbbb94a7d0869071c487f8b" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-annotations-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-annotations-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="50c1a6c0-3c4d-482e-813f-0a3fb343a674" description="" file_name="jetty-webapp-9.4.42.v20210604.jar" library="Jetty :: Webapp Application Support" library_id="maven:org.eclipse.jetty:jetty-webapp:9.4.42.v20210604:" max_cvss_score="" sha1="517535ba4c69135503e714152982fbe37ede68fd" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-webapp-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-webapp-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="54a62d5c-db3c-4995-8f18-e0825d93c3e3" description="" file_name="jakarta.servlet-api-4.0.4.jar" library="Jakarta Servlet" library_id="maven:jakarta.servlet:jakarta.servlet-api:4.0.4:" max_cvss_score="" sha1="b8a1142e04838fe54194049c6e7a18dae8f9b960" vendor="jakarta.servlet" version="4.0.4" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jakarta.servlet-api-4.0.4.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jakarta.servlet-api-4.0.4.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html" mitigation="false" name="GNU General Public License with Classpath Exceptions version 2.0" risk_rating="4" spdx_id="GPL-2.0-with-classpath-exception"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="556904e5-40b0-49b9-be83-3822f3c1a11c" description="WebSocket (JSR356) API" file_name="tomcat-websocket-api-9.0.16.jar" library="tomcat-websocket-api" library_id="maven:org.apache.tomcat:tomcat-websocket-api:9.0.16:" max_cvss_score="" sha1="" vendor="org.apache.tomcat" version="9.0.16" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/tomcat-embed-websocket-9.0.46.jar:tomcat-websocket-api-9.0.16.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="559606c4-731e-49b3-b9cb-43007b9a480c" description="" file_name="websocket-common-9.4.42.v20210604.jar" library="Jetty :: Websocket :: Common" library_id="maven:org.eclipse.jetty.websocket:websocket-common:9.4.42.v20210604:" max_cvss_score="" sha1="b21737fe882e5ff8a64c0fe6487bdf957761a201" vendor="org.eclipse.jetty.websocket" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/websocket-common-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/websocket-common-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="57e1db1d-0de3-4e78-abca-1252d5cb62b3" description="Java ports and bindings of the LZ4 compression algorithm and the xxHash hashing algorithm" file_name="lz4-java-1.6.0.jar" library="LZ4 and xxHash" library_id="maven:org.lz4:lz4-java:1.6.0:" max_cvss_score="" sha1="b49e2b422a5b7145ba7aa0c3f60c13664a5c5acf" vendor="org.lz4" version="1.6.0" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/lz4-java-1.6.0.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/lz4-java-1.6.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="5d822068-a332-45f2-801b-1d7db0bd49f0" description="" file_name="joda-time-2.10.8.jar" library="Joda-Time" library_id="maven:joda-time:joda-time:2.10.8:" max_cvss_score="" sha1="b0442d652c209a7ba7af0410ce219d997a447701" vendor="joda-time" version="2.10.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/joda-time-2.10.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/joda-time-2.10.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="5d9f2cbc-fbca-4035-9b11-0fa7e9a159ef" description="" file_name="spring-beans-5.3.8.jar" library="Spring Beans" library_id="maven:org.springframework:spring-beans:5.3.8:" max_cvss_score="" sha1="03d66fed1eebfcd119efcabc6218c813700a21ed" vendor="org.springframework" version="5.3.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-beans-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-beans-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="620a498d-7e54-48b5-84e1-1bed6ecf3c8c" description="" file_name="swagger-core-1.5.3.jar" library="swagger-core" library_id="maven:io.swagger:swagger-core:1.5.3:" max_cvss_score="" sha1="ae5bcab98d91421f04b473422d4d55c47fa5aea9" vendor="io.swagger" version="1.5.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/swagger-core-1.5.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/swagger-core-1.5.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="625fa1a9-49ec-4edd-aaa6-0462f2723b18" description="" file_name="websocket-api-9.4.42.v20210604.jar" library="Jetty :: Websocket :: API" library_id="maven:org.eclipse.jetty.websocket:websocket-api:9.4.42.v20210604:" max_cvss_score="" sha1="c5c37801988a5290afa500fdaa82897091c528f5" vendor="org.eclipse.jetty.websocket" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/websocket-api-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/websocket-api-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="652b5b81-4e1e-4a7a-95f7-dd674e2c6bb2" description="" file_name="gson-2.8.6.jar" library="Gson" library_id="maven:com.google.code.gson:gson:2.8.6:" max_cvss_score="" sha1="9180733b7df8542621dc12e21e87557e8c99b8cb" vendor="com.google.code.gson" version="2.8.6" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/gson-2.8.6.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/gson-2.8.6.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="6628ab94-756b-4a27-86b0-d3045b96cbe3" description="" file_name="snakeyaml-1.28.jar" library="SnakeYAML" library_id="maven:org.yaml:snakeyaml:1.28:" max_cvss_score="" sha1="7cae037c3014350c923776548e71c9feb7a69259" vendor="org.yaml" version="1.28" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/snakeyaml-1.28.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/snakeyaml-1.28.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="6767d5b5-9aa5-4094-aae3-b8987c878d01" description="" file_name="swagger-annotations-1.5.22.jar" library="swagger-annotations" library_id="maven:io.swagger:swagger-annotations:1.5.22:" max_cvss_score="" sha1="df523e9a80cf653af6d37c777c4b1306e56b5ae7" vendor="io.swagger" version="1.5.22" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/swagger-annotations-1.5.22.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/swagger-annotations-1.5.22.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="69f857cb-052b-4f78-9be6-f814e91e2d13" description="" file_name="jetty-client-9.4.42.v20210604.jar" library="Jetty :: Asynchronous HTTP Client" library_id="maven:org.eclipse.jetty:jetty-client:9.4.42.v20210604:" max_cvss_score="" sha1="014153048e3a5d4eca6c0619ad9e8462f5054b19" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-client-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-client-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="6ed4e52c-48fb-402c-af6c-203d122a807a" description="" file_name="classmate-1.5.1.jar" library="ClassMate" library_id="maven:com.fasterxml:classmate:1.5.1:" max_cvss_score="" sha1="3fe0bed568c62df5e89f4f174c101eab25345b6c" vendor="com.fasterxml" version="1.5.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/classmate-1.5.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/classmate-1.5.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="75532bd0-6aa0-494e-842c-1fb6347b7f97" description="" file_name="commons-compress-1.21.jar" library="Apache Commons Compress" library_id="maven:org.apache.commons:commons-compress:1.21:" max_cvss_score="" sha1="4ec95b60d4e86b5c95a0e919cb172a0af98011ef" vendor="org.apache.commons" version="1.21" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/commons-compress-1.21.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/commons-compress-1.21.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="78c6393a-0cd8-48e8-a539-79b1fe4b547c" description="" file_name="log4j-core-2.17.1.jar" library="Apache Log4j Core" library_id="maven:org.apache.logging.log4j:log4j-core:2.17.1:" max_cvss_score="" sha1="779f60f3844dadc3ef597976fcb1e5127b1f343d" vendor="org.apache.logging.log4j" version="2.17.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/log4j-core-2.17.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/log4j-core-2.17.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="793ce485-994d-4cb6-9fe5-1c3d7a20eab3" description="" file_name="spring-webmvc-5.3.8.jar" library="Spring Web MVC" library_id="maven:org.springframework:spring-webmvc:5.3.8:" max_cvss_score="" sha1="2cfa5e12bf103e2c82db78ce198e455dab456465" vendor="org.springframework" version="5.3.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-webmvc-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-webmvc-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="79f6c074-400f-4c9f-99cd-f7a6e5fe000a" description="" file_name="asm-analysis-9.0.jar" library="asm-analysis" library_id="maven:org.ow2.asm:asm-analysis:9.0:" max_cvss_score="" sha1="4630afefbb43939c739445dde0af1a5729a0fb4e" vendor="org.ow2.asm" version="9.0" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/asm-analysis-9.0.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/asm-analysis-9.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/BSD-3-Clause.html" mitigation="false" name="BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License" risk_rating="2" spdx_id="BSD-3-Clause"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="7dd0d349-01d0-4522-b0fb-30c872b473d9" description="" file_name="jetty-server-9.4.42.v20210604.jar" library="Jetty :: Server Core" library_id="maven:org.eclipse.jetty:jetty-server:9.4.42.v20210604:" max_cvss_score="" sha1="f5f95cdabe677bd8aad9e80f5e125c5b1c5011aa" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-server-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-server-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="7e1cdda0-6580-4ea7-a57e-17606133aa15" description="" file_name="jackson-datatype-jsr310-2.12.3.jar" library="Jackson datatype: JSR310" library_id="maven:com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.3:" max_cvss_score="" sha1="f69c636438dcf19c49960c1fe8901320ab85f989" vendor="com.fasterxml.jackson.datatype" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-datatype-jsr310-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-datatype-jsr310-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="82cfc7c7-2167-484b-9520-ef6615f4958b" description="" file_name="jetty-http-9.4.42.v20210604.jar" library="Jetty :: Http Utility" library_id="maven:org.eclipse.jetty:jetty-http:9.4.42.v20210604:" max_cvss_score="5.3" sha1="2b0bb748d2388c6aa981ab29bc0a6a695dee31a4" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="1">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-http-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-http-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities>
+          <vulnerability cve_id="CVE-2021-34429" cve_summary="jetty-http is vulnerable to information disclosure. Insecure parsing of encoded characters allow an attacker to bypass security constraints and potentially access private files within the `WEB-INF` directory." cvss_score="5.3" cwe_id="" first_found_date="2021-07-16 17:03:10 UTC" mitigation="false" severity="3" severity_desc="Medium" vulnerability_affects_policy_compliance="false"/>
+        </vulnerabilities>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="8876ca0c-6bcb-4cb1-b605-2c2912a6a3e2" description="" file_name="zstd-jni-1.4.3-1.jar" library="zstd-jni" library_id="maven:com.github.luben:zstd-jni:1.4.3-1:" max_cvss_score="" sha1="c3c8278c6a02b332a21fcd2c22434d0bc928126d" vendor="com.github.luben" version="1.4.3-1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/zstd-jni-1.4.3-1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/zstd-jni-1.4.3-1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/BSD-2-Clause.html" mitigation="false" name="BSD 2-Clause &quot;Simplified&quot; License" risk_rating="2" spdx_id="BSD-2-Clause"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="88a7802a-a3dd-4968-8d36-78923da048e1" description="" file_name="jetty-plus-9.4.42.v20210604.jar" library="Jetty :: Plus" library_id="maven:org.eclipse.jetty:jetty-plus:9.4.42.v20210604:" max_cvss_score="" sha1="8c30417bcf7ad73c86c32006dddb402f606233f1" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-plus-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-plus-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="8c2978e1-df1d-4c33-98c4-a0e2c5120e85" description="" file_name="jackson-module-parameter-names-2.12.3.jar" library="Jackson-module-parameter-names" library_id="maven:com.fasterxml.jackson.module:jackson-module-parameter-names:2.12.3:" max_cvss_score="" sha1="592a882beaf1bd57b8fe960b937a2706b090b4d7" vendor="com.fasterxml.jackson.module" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-module-parameter-names-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-module-parameter-names-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="8f41bc8a-3e6e-4d41-ad5d-056ee5601ecb" description="RocksDB fat jar that contains .so files for linux32 and linux64, jnilib files&#10;        for Mac OSX, and a .dll for Windows x64." file_name="rocksdbjni-5.18.3.jar" library="RocksDB JNI" library_id="maven:org.rocksdb:rocksdbjni:5.18.3:" max_cvss_score="" sha1="6d3f8594ab85cc3c473fa97a5d5cb94cf5568e2b" vendor="org.rocksdb" version="5.18.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/rocksdbjni-5.18.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/rocksdbjni-5.18.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/GPL-2.0.html" mitigation="false" name="GNU General Public License v2.0 only" risk_rating="4" spdx_id="GPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="92e21914-c573-47c7-b279-179eee3892be" description="" file_name="websocket-server-9.4.42.v20210604.jar" library="Jetty :: Websocket :: Server" library_id="maven:org.eclipse.jetty.websocket:websocket-server:9.4.42.v20210604:" max_cvss_score="" sha1="458a060b4d5d3b5065ac14ae8d7fa56ae280cdbf" vendor="org.eclipse.jetty.websocket" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/websocket-server-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/websocket-server-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="9380b840-c182-403a-8cdb-49790e1fb9ea" description="" file_name="org.apache.servicemix.bundles.spring-aop-5.3.5_1.jar" library="org.apache.servicemix.bundles.spring-aop" library_id="maven:org.apache.servicemix.bundles:org.apache.servicemix.bundles.spring-aop:5.3.5_1:" max_cvss_score="" sha1="" vendor="org.apache.servicemix.bundles" version="5.3.5_1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-aop-5.3.8.jar:org.apache.servicemix.bundles.spring-aop-5.3.5_1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="966aee80-87f0-4d84-a954-b521dc00b7e2" description="" file_name="spring-boot-actuator-autoconfigure-2.5.1.jar" library="spring-boot-actuator-autoconfigure" library_id="maven:org.springframework.boot:spring-boot-actuator-autoconfigure:2.5.1:" max_cvss_score="" sha1="bfc22691e0a91b09af2b02a3cc0a0829dfbbc449" vendor="org.springframework.boot" version="2.5.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-boot-actuator-autoconfigure-2.5.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="9aca5365-7e52-4705-85ea-43e79e191fb6" description="" file_name="tomcat-embed-el-9.0.46.jar" library="tomcat-embed-el" library_id="maven:org.apache.tomcat.embed:tomcat-embed-el:9.0.46:" max_cvss_score="" sha1="69a1e4fb339b8f4020481d68067114976e3a8515" vendor="org.apache.tomcat.embed" version="9.0.46" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/tomcat-embed-el-9.0.46.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/tomcat-embed-el-9.0.46.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="9be7b80b-993d-4e99-875d-c0f4cff4d69c" description="" file_name="spring-expression-5.3.8.jar" library="Spring Expression Language (SpEL)" library_id="maven:org.springframework:spring-expression:5.3.8:" max_cvss_score="" sha1="8a14547b76cbae3aeb02739e5b38e71835a6bbd8" vendor="org.springframework" version="5.3.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-expression-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-expression-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="9d902454-791f-4d2d-a221-eb86e48ef556" description="" file_name="jackson-databind-2.12.3.jar" library="jackson-databind" library_id="maven:com.fasterxml.jackson.core:jackson-databind:2.12.3:" max_cvss_score="" sha1="d6153f8fc60c479ab0f9efb35c034526436a4953" vendor="com.fasterxml.jackson.core" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-databind-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-databind-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="9fac9cda-3788-46cb-b4d2-a8a7a7ea2d78" description="" file_name="jackson-annotations-2.12.3.jar" library="Jackson-annotations" library_id="maven:com.fasterxml.jackson.core:jackson-annotations:2.12.3:" max_cvss_score="" sha1="7275513412694a1aafd08c0287f48469fa0e6e17" vendor="com.fasterxml.jackson.core" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-annotations-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-annotations-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="9fe39125-6c48-4712-b8a8-eb3228f842f0" description="Guava is a suite of core and expanded libraries that include&#10;    utility classes, google's collections, io classes, and much&#10;    much more.&#10;&#10;    Guava has only one code dependency - javax.annotation,&#10;    per the JSR-305 spec." file_name="guava-18.0.jar" library="Guava: Google Core Libraries for Java" library_id="maven:com.google.guava:guava:18.0:" max_cvss_score="5.9" sha1="cce0823396aa693798f8882e64213b1772032b09" vendor="com.google.guava" version="18.0" vulnerabilities="2">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/guava-18.0.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/guava-18.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities>
+          <vulnerability cve_id="CVE-2018-10237" cve_summary="Unbounded memory allocation in Google Guava 11.0 through 24.x before 24.1.1 allows remote attackers to conduct denial of service attacks against servers that depend on this library and deserialize attacker-provided data, because the AtomicDoubleArray class (when serialized with Java serialization) and the CompoundOrdering class (when serialized with GWT serialization) perform eager allocation without appropriate checks on what a client has sent and whether the data size is reasonable." cvss_score="5.9" cwe_id="CWE-502" first_found_date="2018-07-02 22:00:09 UTC" mitigation="false" severity="3" severity_desc="Medium" vulnerability_affects_policy_compliance="false"/>
+          <vulnerability cve_id="CVE-2020-8908" cve_summary="guava is vulnerable to information disclosure. A folder with insecure permissions is created by the function `com.google.common.io.Files.createTempDir`. A local user will be able to steal secrets stored in this directory." cvss_score="3.3" cwe_id="" first_found_date="2020-10-26 06:50:27 UTC" mitigation="false" severity="2" severity_desc="Low" vulnerability_affects_policy_compliance="false"/>
+        </vulnerabilities>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="a479787c-1a7c-48da-a078-f90f475b3313" description="" file_name="spring-boot-actuator-2.5.1.jar" library="spring-boot-actuator" library_id="maven:org.springframework.boot:spring-boot-actuator:2.5.1:" max_cvss_score="5.3" sha1="0f1de9f67429069115179a5c39e9685f7bcb59a3" vendor="org.springframework.boot" version="2.5.1" vulnerabilities="1">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-boot-actuator-2.5.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities>
+          <vulnerability cve_id="CVE-2021-22047" cve_summary="spring-boot-actuator is vulnerable to security restriction bypass. Lack of secure handling of HTTP resources implemented by custom controllers using a configured base API path and a controller type-level request mapping causes the exposure of those resources and request mapping, leading to unauthorized access depending on the Spring Security configuration." cvss_score="5.3" cwe_id="" first_found_date="2021-10-29 18:06:54 UTC" mitigation="false" severity="3" severity_desc="Medium" vulnerability_affects_policy_compliance="false"/>
+        </vulnerabilities>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="afb1c394-b919-4853-81e3-c6ba19563dec" description="" file_name="jackson-datatype-jdk8-2.12.3.jar" library="Jackson datatype: jdk8" library_id="maven:com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.12.3:" max_cvss_score="" sha1="77424ea087313312e308dae5ff8445608aabb5e1" vendor="com.fasterxml.jackson.datatype" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-datatype-jdk8-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-datatype-jdk8-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="b2ff4476-f6b8-41bc-b177-8ddc8e1d9730" description="" file_name="websocket-servlet-9.4.42.v20210604.jar" library="Jetty :: Websocket :: Servlet" library_id="maven:org.eclipse.jetty.websocket:websocket-servlet:9.4.42.v20210604:" max_cvss_score="" sha1="1555314d4a5e3f27265351e855d52df3bdd4d6b4" vendor="org.eclipse.jetty.websocket" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/websocket-servlet-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/websocket-servlet-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="b5d9cfdb-774c-4fd3-9faa-dacc5f3c9bc7" description="" file_name="asm-tree-9.0.jar" library="asm-tree" library_id="maven:org.ow2.asm:asm-tree:9.0:" max_cvss_score="" sha1="9df939f25c556b0c7efe00701d47e77a49837f24" vendor="org.ow2.asm" version="9.0" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/asm-tree-9.0.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/asm-tree-9.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/BSD-3-Clause.html" mitigation="false" name="BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License" risk_rating="2" spdx_id="BSD-3-Clause"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="bcf363f4-bcac-4e13-85a0-4e18abd4f780" description="" file_name="converter-0.2.9.jar" library="converter" library_id="maven:tech.allegro.schema.json2avro:converter:0.2.9:" max_cvss_score="" sha1="cb5bec2ed8e221b7d284d24a1f327f9971f12ddf" vendor="tech.allegro.schema.json2avro" version="0.2.9" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/converter-0.2.9.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="bed880fe-4058-4a59-94f2-a5c76336dbed" description="" file_name="log4j-api-2.17.1.jar" library="Apache Log4j API" library_id="maven:org.apache.logging.log4j:log4j-api:2.17.1:" max_cvss_score="" sha1="d771af8e336e372fb5399c99edabe0919aeaf5b2" vendor="org.apache.logging.log4j" version="2.17.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/log4j-api-2.17.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/log4j-api-2.17.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="c307a3bf-d071-41d1-96f2-5510f599f6e0" description="" file_name="spring-context-5.3.8.jar" library="Spring Context" library_id="maven:org.springframework:spring-context:5.3.8:" max_cvss_score="" sha1="c367a05423e963c222e38a6a88b97d44de3880ca" vendor="org.springframework" version="5.3.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-context-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-context-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="c3405cf2-ffa9-4b9b-8677-d5d1ac07a70c" description="" file_name="jetty-continuation-9.4.42.v20210604.jar" library="Jetty :: Continuation" library_id="maven:org.eclipse.jetty:jetty-continuation:9.4.42.v20210604:" max_cvss_score="" sha1="4643b3d12979e60a28cd1392137e28914105dde7" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-continuation-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-continuation-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="c7b5468c-34fc-4d87-b83b-9a27efe938cb" description="" file_name="spring-jcl-5.3.8.jar" library="Spring Commons Logging Bridge" library_id="maven:org.springframework:spring-jcl:5.3.8:" max_cvss_score="" sha1="0a143c8618eb2be8674c3cf132d9a5c953bb5488" vendor="org.springframework" version="5.3.8" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-jcl-5.3.8.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-jcl-5.3.8.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="c7d8b1f5-202a-4da2-ab09-126932139a77" description="" file_name="kafka-streams-2.4.1.jar" library="Apache Kafka" library_id="maven:org.apache.kafka:kafka-streams:2.4.1:" max_cvss_score="" sha1="082ffbd7ebef59068fc21832889b24ad15dda519" vendor="org.apache.kafka" version="2.4.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/kafka-streams-2.4.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/kafka-streams-2.4.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="c8f4b14a-fd9f-485f-b06b-95ce0e42b6a2" description="" file_name="slf4j-api-1.7.30.jar" library="SLF4J API Module" library_id="maven:org.slf4j:slf4j-api:1.7.30:" max_cvss_score="" sha1="b5a4b6d16ab13e34a88fae84c35cd5d68cac922c" vendor="org.slf4j" version="1.7.30" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/slf4j-api-1.7.30.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/slf4j-api-1.7.30.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/MIT.html" mitigation="false" name="MIT License" risk_rating="2" spdx_id="MIT"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="ca0b66d3-5a0a-48c1-96bc-59ceb5143f5f" description="snappy-java: A fast compression/decompression library" file_name="snappy-java-1.1.7.3.jar" library="snappy-java" library_id="maven:org.xerial.snappy:snappy-java:1.1.7.3:" max_cvss_score="" sha1="241bb74a1eb37d68a4e324a4bc3865427de0a62d" vendor="org.xerial.snappy" version="1.1.7.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/snappy-java-1.1.7.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/snappy-java-1.1.7.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="ca8c30b8-db2a-4378-8700-5c971d4a3257" description="" file_name="jakarta.annotation-api-1.3.5.jar" library="Jakarta Annotations API" library_id="maven:jakarta.annotation:jakarta.annotation-api:1.3.5:" max_cvss_score="" sha1="59eb84ee0d616332ff44aba065f3888cf002cd2d" vendor="jakarta.annotation" version="1.3.5" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jakarta.annotation-api-1.3.5.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jakarta.annotation-api-1.3.5.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html" mitigation="false" name="GNU General Public License with Classpath Exceptions version 2.0" risk_rating="4" spdx_id="GPL-2.0-with-classpath-exception"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="caf17a8f-b5d7-4e87-8326-49f38664e06f" description="" file_name="jetty-xml-9.4.42.v20210604.jar" library="Jetty :: XML utilities" library_id="maven:org.eclipse.jetty:jetty-xml:9.4.42.v20210604:" max_cvss_score="" sha1="8333226af8fcd8c10dc78da5b5ee12ed6848be26" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-xml-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-xml-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="cb541866-1b9d-43a7-a609-698b9c22379e" description="" file_name="tomcat-embed-websocket-9.0.46.jar" library="tomcat-embed-websocket" library_id="maven:org.apache.tomcat.embed:tomcat-embed-websocket:9.0.46:" max_cvss_score="" sha1="e85e7c3df9353cf7f6b9e766ac61c0c313f9a57f" vendor="org.apache.tomcat.embed" version="9.0.46" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/tomcat-embed-websocket-9.0.46.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/tomcat-embed-websocket-9.0.46.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="d34de1c3-f55a-44f3-b7bc-c3caf6848679" description="" file_name="asm-9.0.jar" library="asm" library_id="maven:org.ow2.asm:asm:9.0:" max_cvss_score="" sha1="af582ff60bc567c42d931500c3fdc20e0141ddf9" vendor="org.ow2.asm" version="9.0" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/asm-9.0.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/asm-9.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/BSD-3-Clause.html" mitigation="false" name="BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License" risk_rating="2" spdx_id="BSD-3-Clause"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="d35961a4-969e-4736-8e1c-dfc8b738a12c" description="" file_name="spring-boot-loader-2.5.1.jar" library="spring-boot-loader" library_id="maven:org.springframework.boot:spring-boot-loader:2.5.1:" max_cvss_score="" sha1="" vendor="org.springframework.boot" version="2.5.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar:spring-boot-loader-2.5.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="d5ad2474-ad09-43ef-a781-38552b506305" description="" file_name="spring-boot-jarmode-layertools-2.5.1.jar" library="spring-boot-jarmode-layertools" library_id="maven:org.springframework.boot:spring-boot-jarmode-layertools:2.5.1:" max_cvss_score="" sha1="33909a25662ea7dd4065a1e2dfd482889583b11d" vendor="org.springframework.boot" version="2.5.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-boot-jarmode-layertools-2.5.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-boot-jarmode-layertools-2.5.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="da82a5f6-d8a7-4799-89ab-bcf145617681" description="" file_name="connect-json-2.4.1.jar" library="Apache Kafka" library_id="maven:org.apache.kafka:connect-json:2.4.1:" max_cvss_score="" sha1="85b4ced27931de4e240e031b43158c3d91de4b6b" vendor="org.apache.kafka" version="2.4.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/connect-json-2.4.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/connect-json-2.4.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="dac2ecf7-a155-4700-bcf2-56512e4d749b" description="" file_name="jetty-security-9.4.42.v20210604.jar" library="Jetty :: Security" library_id="maven:org.eclipse.jetty:jetty-security:9.4.42.v20210604:" max_cvss_score="" sha1="8f755242d4d73d98bef0055546aa53cf1ca456d9" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-security-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-security-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="dd4b2884-891e-4ab3-862e-e3bfe3592416" description="" file_name="jackson-core-2.12.3.jar" library="Jackson-core" library_id="maven:com.fasterxml.jackson.core:jackson-core:2.12.3:" max_cvss_score="" sha1="deb23fe2a7f2b773e18ced2b50d4acc1df8fa366" vendor="com.fasterxml.jackson.core" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-core-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-core-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="e83cac54-a071-489b-b603-84c5f31d8ae2" description="" file_name="log4j-slf4j-impl-2.13.0.jar" library="Apache Log4j SLF4J Binding" library_id="maven:org.apache.logging.log4j:log4j-slf4j-impl:2.13.0:" max_cvss_score="" sha1="30812d74b7d99b58696141b6e25ff997e9ba0707" vendor="org.apache.logging.log4j" version="2.13.0" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/log4j-slf4j-impl-2.13.0.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/log4j-slf4j-impl-2.13.0.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="edfd8a3e-73ea-4efe-820d-d40e8567d487" description="" file_name="jackson-datatype-joda-2.12.3.jar" library="Jackson datatype: Joda" library_id="maven:com.fasterxml.jackson.datatype:jackson-datatype-joda:2.12.3:" max_cvss_score="" sha1="3b66fb3f8a4351c658ec4fa8301259a7426ca2ea" vendor="com.fasterxml.jackson.datatype" version="2.12.3" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jackson-datatype-joda-2.12.3.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jackson-datatype-joda-2.12.3.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="ef63f489-45a7-4ba7-b07a-c3f57225e386" description="" file_name="spring-boot-2.5.1.jar" library="spring-boot" library_id="maven:org.springframework.boot:spring-boot:2.5.1:" max_cvss_score="" sha1="eb046cc9d226cb8ab131283c526d132ba71ed39c" vendor="org.springframework.boot" version="2.5.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/spring-boot-2.5.1.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/spring-boot-2.5.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="f112285a-26df-4ce6-9f37-eeb40257bf59" description="" file_name="avro-1.9.2.jar" library="Apache Avro" library_id="maven:org.apache.avro:avro:1.9.2:" max_cvss_score="" sha1="7e67193b94e45d32277ac480ea86421fd3976424" vendor="org.apache.avro" version="1.9.2" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/avro-1.9.2.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/avro-1.9.2.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="f282dba8-0111-4932-9462-221352fe720d" description="" file_name="jetty-io-9.4.42.v20210604.jar" library="Jetty :: IO Utility" library_id="maven:org.eclipse.jetty:jetty-io:9.4.42.v20210604:" max_cvss_score="" sha1="581c5bb1aca96934e6961315fff066000c783659" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-io-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-io-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="f4ad37d8-2b06-4003-8d9f-6b62ad431d28" description="" file_name="simpleclient-0.8.1.jar" library="Prometheus Java Simpleclient" library_id="maven:io.prometheus:simpleclient:0.8.1:" max_cvss_score="" sha1="1c63c919896a6055507e87d9742f9158d6ecccf1" vendor="io.prometheus" version="0.8.1" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/simpleclient-0.8.1.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="f5941a78-0ebe-4520-af2f-f136af1fb1ec" description="" file_name="websocket-client-9.4.42.v20210604.jar" library="Jetty :: Websocket :: Client" library_id="maven:org.eclipse.jetty.websocket:websocket-client:9.4.42.v20210604:" max_cvss_score="" sha1="49033cce98ba1853c16459aa5e3fbbf249d3ff8c" vendor="org.eclipse.jetty.websocket" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/websocket-client-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/websocket-client-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+      <component component_affects_policy_compliance="false" component_id="faec66cd-118d-4bb3-b583-bce6cf1eed48" description="" file_name="jetty-util-ajax-9.4.42.v20210604.jar" library="Jetty :: Utilities :: Ajax(JSON)" library_id="maven:org.eclipse.jetty:jetty-util-ajax:9.4.42.v20210604:" max_cvss_score="" sha1="dfff709928e92d8fd4888d53dbdfb024a4aa92f9" vendor="org.eclipse.jetty" version="9.4.42.v20210604" vulnerabilities="0">
+        <file_paths>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-avro-message-publisher-1.0.jar#zip:BOOT-INF/lib/jetty-util-ajax-9.4.42.v20210604.jar"/>
+          <file_path value="SCO_1645614171864_tar/resultingJars/tsb-onboarding-generic-stub-data-service-1.0.jar#zip:BOOT-INF/lib/jetty-util-ajax-9.4.42.v20210604.jar"/>
+        </file_paths>
+        <licenses>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/Apache-2.0.html" mitigation="false" name="Apache License 2.0" risk_rating="2" spdx_id="Apache-2.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-1.0.html" mitigation="false" name="Eclipse Public License 1.0" risk_rating="3" spdx_id="EPL-1.0"/>
+          <license license_affects_policy_compliance="false" license_url="https://spdx.org/licenses/EPL-2.0.html" mitigation="false" name="Eclipse Public License 2.0" risk_rating="3" spdx_id="EPL-2.0"/>
+        </licenses>
+        <vulnerabilities/>
+        <violated_policy_rules/>
+      </component>
+    </vulnerable_components>
+  </software_composition_analysis>
+</summaryreport>
