@@ -7,7 +7,7 @@ pipeline {
 		steps {
 			script {
 
-                                 veracodesummaryreportXML = new XmlParser().parseText(test1)
+                                 veracodesummaryreportXML = new XmlParser().parseText(Veracode.xml)
                                  for(veracodesummary in veracodesummaryreportXML.value()){
 					//if((veracodesummary.attributes().severity == "High" &&  veracodesummary.attributes().count > 0) ||  (veracodesummary.attributes().severity == "Very High" && veracodesummary.attributes().count > 0)){
 						//scanresult = failure
